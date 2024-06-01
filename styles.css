@@ -95,7 +95,7 @@ section {
     transform: translateY(-50%);
     display: flex; /* Use flexbox to center the child elements */
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .like-button {
@@ -125,6 +125,15 @@ section {
     width: 24px; /* Adjust the size of the floating images */
     height: auto;
     pointer-events: none; /* Ensure the floating likes do not interfere with clicks */
+}
+
+.like-text {
+    font-family: 'Single Day', cursive;
+    text-align: center; /* Center the text */
+    font-size: 48px; /* Set the desired font size */
+    margin-top: 0px; /* Add some spacing above the text */
+    color: #ffffff; /* Add the desired color */
+    font-weight: bold; /* Make the text bold */
 }
 
 @keyframes blobAnimation {
