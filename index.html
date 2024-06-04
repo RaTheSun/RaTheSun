@@ -3,63 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZM - Solana Meme Token</title>
-    <!-- Link to Google Fonts -->
+    <title>One Page Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Oswald&family=Single+Day&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Suez+One&family=Gamja+Flower&family=Jua&family=Single+Day&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 <body>
-    <!-- Updated Header with Navigation Bar -->
     <header>
-        <div class="nav-left">
-            <h1>ZM</h1> <!-- Text placeholder -->
-        </div>
-        <nav class="nav-right">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#meme">Meme</a></li>
-                <li><a href="#tokenomics">Tokenomics</a></li>
-                <li><a href="#how-to-buy">Buy</a></li>
-                <li><a href="#faq">Faqs</a></li>
-            </ul>
-        </nav>
+        <h1>ZARK Merkerberg</h1>
+        <a href="https://your_buy_zark_link" class="buy-now-button">Buy Now</a>
     </header>
-
-    <section id="about">
-        <h2>ZARK MERKERBERG</h2>
-        <p class="handwriting">"Trust" me with your data!</p>
-        <div class="image-container">
-            <img src="assets/images/base.png" alt="Description of image" />
-            <div class="thumbs-up-container">
-                <div class="blob"></div> <!-- Add this line for the rectangular box -->
-                <img src="assets/images/thumbsup.png" class="like-button" alt="Like Button" /> <!-- Use the new thumbs-up image -->
-                <div class="like-text">Like</div>
-            </div>
+    <div class="main-content">
+        <img src="assets/images/base.png" alt="Zark" class="main-image">
+        <p>"Trust meme with your data."</p>
+        <div class="icon-links">
+            <span class="join-us-text">JOIN OUR COMMUNITY</span>
+            <a href="https://t.me/your_telegram_link" target="_blank" class="icon-link">
+                <img src="assets/images/telegram-icon.png" alt="Telegram">
+            </a>
+            <a href="https://twitter.com/your_twitter_link" target="_blank" class="icon-link">
+                <img src="assets/images/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://dexscreener.com/your_dexscreener_link" target="_blank" class="icon-link">
+                <img src="assets/images/dexscreener-icon.png" alt="Dexscreener">
+            </a>
         </div>
+        <div class="contract-id-box">
+            <span>CA: 123905823057023240</span>
+            <button class="copy-button" onclick="copyToClipboard('123905823057023240', this)"> COPY </button>
+        </div>
+    </div>
+    <section id="about-section">
+        <h3>About</h3>
+        <p>Content for the About section.</p>
     </section>
 
-    <section id="tokenomics">
-        <h2>Tokenomics</h2>
-        <p>Details on the token distribution and usage.</p>
+    <section id="how-to-buy-section">
+        <h3>How To Buy</h3>
+        <p>Content for the How To Buy section.</p>
     </section>
 
-    <section id="how-to-buy">
-        <h2>How to Buy</h2>
-        <p>Instructions on how to purchase ZM tokens.</p>
+    <section id="memes-section">
+        <h3>Memes</h3>
+        <p>Content for the Memes section.</p>
     </section>
-
-    <section id="faq">
-        <h2>FAQ</h2>
-        <p>Frequently asked questions and answers about ZM.</p>
-    </section>
-
     <footer>
-        <p>&copy; 2024 ZM. All rights reserved.</p>
+        <p>Footer</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

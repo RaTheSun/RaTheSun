@@ -1,191 +1,201 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Use Google Fonts */
 body {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 22px;
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Updated Header styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #3b5998; /* Facebook blue color */
-    color: #fff;
-    padding: 0.35rem 2rem; /* Adjusted padding */
-}
-
-.handwriting {
-    font-family: 'Single Day', cursive;
-    text-align: center; /* Center the text */
-    font-size: 48px; /* Set the desired font size */
-    margin-top: 24px; /* Add some spacing above the text */
-    color: #3b5998; /* Add the desired color */
-    font-weight: bold; /* Make the text bold */
-}
-
-.nav-left h1 {
+    font-family: 'Single Day', sans-serif;
     margin: 0;
-}
-
-.nav-right ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
     padding: 0;
 }
 
-.nav-right ul li {
-    margin: 0 20px;
-}
-
-.nav-right ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Section styling */
-section {
-    padding: 2rem 0;
+/* Dark blue header */
+header {
+    background-color: #3b5998;
     text-align: center;
-}
-
-#about h2 {
-    font-family: 'Oswald', sans-serif; /* Set Oswald font */
-    text-align: center; /* Center the text */
-    font-size: 82px; /* Set the font size to 32px */
-    margin-bottom: 0vh;
-}
-
-#about img {
-    display: block; /* Center the image horizontally */
-    margin: 0 auto; /* Center the image horizontally */
-    width: 35%; /* Ensure the image does not overflow the section */
-    height: auto; /* Maintain aspect ratio */
-}
-
-#about, #tokenomics, #how-to-buy, #faq {
-    background: #fff;
-    margin: 1rem 0;
-    padding: 2rem;
-    border-radius: 5px;
-}
-
-.image-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.thumbs-up-container {
-    position: absolute;
-    right: 60px; /* Adjust as needed to place it to the right side */
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex; /* Use flexbox to center the child elements */
-    align-items: center;
-    flex-direction: column;
-}
-
-.like-button {
-    max-width: 50%; /* Adjust the size as needed */
-    height: auto;
-    cursor: pointer;
-    position: relative; /* Ensure it stays within the thumbs-up container */
-    animation: float 2s infinite;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.blob {
-    position: absolute;
-    width: 60%;
-    height: 150%;
-    background-color: #4C70BA; /* Blue color with some transparency */
-    z-index: -1;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    border-radius: 70% 30% 67% 33% / 34% 57% 43% 66%;
-    transform: translate(-50%, -50%); /* Adjust for centering */
-    animation: blobAnimation 4s linear infinite;
-}
-
-.floating-like {
-    position: absolute;
-    width: 24px; /* Adjust the size of the floating images */
-    height: auto;
-    pointer-events: none; /* Ensure the floating likes do not interfere with clicks */
-}
-
-.like-text {
-    font-family: 'Single Day', cursive;
-    text-align: center; /* Center the text */
-    font-size: 48px; /* Set the desired font size */
-    margin-top: 0px; /* Add some spacing above the text */
-    color: #ffffff; /* Add the desired color */
-    font-weight: bold; /* Make the text bold */
-}
-
-@keyframes blobAnimation {
-    0%, 100% {
-        border-radius: 70% 30% 67% 33% / 34% 57% 43% 66%;
-    }
-    20% {
-        border-radius: 60% 40% 55% 45% / 45% 55% 55% 45%;
-    }
-    40% {
-        border-radius: 33% 67% 27% 73% / 54% 30% 70% 46%;
-    }
-    60% {
-        border-radius: 50% 50% 60% 40% / 40% 50% 60% 50%;
-    }
-    80% {
-        border-radius: 72% 28% 56% 44% / 34% 60% 40% 66%;
-    }
-}
-
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);    
-    }
-}
-
-/* Footer styling */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+    padding: 1em 0;
     position: fixed;
     width: 100%;
-    bottom: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0.1em 0.1em #000000;
 }
 
-/* Responsive adjustments */
+header h1 {
+    font-family: 'Gamja Flower', sans-serif;
+    margin: 0;
+    color: white;
+    font-size: 4.2em;
+    display: inline-block;
+}
+
+/* Buy Now button in header */
+.buy-now-button {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    background-color: #ff3838;
+    color: rgb(255, 255, 255);
+    padding: 0.25em 1.75em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 2.5em;
+    box-shadow: 0.1em 0.1em #000000;
+}
+
+.buy-now-button:hover {
+    background-color: #ff1111;
+}
+
+/* Main Content - Container */
+.main-content {
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    margin-top: 7.25em;
+}
+
+/* Main Content - Base Image */
+.main-content img.main-image {
+    max-width: 45%;
+    min-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Main Content - Tagline */
+.main-content p {
+    font-size: clamp(2em, 3.5vw, 4em);
+    margin: 0em 0;
+}
+
+/* Main Content - Icons */
+.icon-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25em;
+    margin-top: 1em;
+}
+
+.icon-link img {
+    margin-left: 1em;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    object-fit: cover;
+}
+
+.join-us-text {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-left: 0em;
+    color: #000000;
+}
+
+/* Contract ID Box */
+.contract-id-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.contract-id-box span {
+    font-size: 1.25em;
+    margin-right: 1em;
+}
+
+.copy-button {
+    width: 8em;
+    font-family: 'Single Day', sans-serif;
+    font-size: 1.2em;
+    padding: 0.2em 0em;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b5998;
+    color: white;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background-color: #2d4373;
+}
+
+/* Floating thumbs-up animation */
+.floating-like {
+    position: absolute;
+    width: 10px; /* Adjust the size as needed */
+    height: 10px;
+    pointer-events: none;
+    z-index: 1000; /* Ensure it appears above other elements */
+    opacity: 1; /* Ensure it's visible */
+}
+
+/* Main Content - Icon Sparkle Effect */
+.sparkle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #3b5998;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Other Sections */
+section {
+    padding: 2em;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 1em 0;
+}
+
+section h3 {
+    font-family: 'Single Day', sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+section p {
+    font-size: 1.25em;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #3b5998;
+    text-align: center;
+    padding: 0em 0;
+}
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
+    header h1 {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
     }
 
-    .nav-right ul {
-        flex-direction: column;
+    .buy-now-button {
+        font-size: 0.8em; /* Adjust button font size for smaller screens */
+        padding: 0.4em 0.8em; /* Adjust button padding for smaller screens */
     }
 
-    .nav-right ul li {
-        margin: 10px 0;
+    .icon-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;     
+    }
+
+    .icon-link {
+        justify-content: flex-start;
+        width: 30%;
+        max-width: 50px;
+    }
+
+    .icon-link img {
+        width: 50px;
+        height: 50px;
     }
 }
