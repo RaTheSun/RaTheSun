@@ -1,57 +1,488 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Page Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Suez+One&family=Gamja+Flower&family=Jua&family=Single+Day&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-</head>
-<body>
-    <header>
-        <h1>ZARK Merkerberg</h1>
-        <a href="https://your_buy_zark_link" class="buy-now-button">Buy Now</a>
-    </header>
-    <div class="main-content">
-        <img src="assets/images/base.png" alt="Zark" class="main-image">
-        <p>"Trust meme with your data."</p>
-        <div class="icon-links">
-            <span class="join-us-text">JOIN OUR COMMUNITY</span>
-            <a href="https://t.me/your_telegram_link" target="_blank" class="icon-link">
-                <img src="assets/images/telegram-icon.png" alt="Telegram">
-            </a>
-            <a href="https://twitter.com/your_twitter_link" target="_blank" class="icon-link">
-                <img src="assets/images/twitter-icon.png" alt="Twitter">
-            </a>
-            <a href="https://dexscreener.com/your_dexscreener_link" target="_blank" class="icon-link">
-                <img src="assets/images/dexscreener-icon.png" alt="Dexscreener">
-            </a>
-        </div>
-        <div class="contract-id-box">
-            <span>CA: 123905823057023240</span>
-            <button class="copy-button" onclick="copyToClipboard('123905823057023240', this)"> COPY </button>
-        </div>
-    </div>
-    <section id="about-section">
-        <h3>About</h3>
-        <p>Content for the About section.</p>
-    </section>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-    <section id="how-to-buy-section">
-        <h3>How To Buy</h3>
-        <p>Content for the How To Buy section.</p>
-    </section>
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
-    <section id="memes-section">
-        <h3>Memes</h3>
-        <p>Content for the Memes section.</p>
-    </section>
-    <footer>
-        <p>Footer</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+      <!--=============== CSS ===============-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="styles.css">
+
+      <title>$ZARK Merkerberg</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header shadow-header" id="header">
+         <nav class="nav">
+            <a href="#" class="nav__logo">
+               <span class="nav__logo-circle">ZK</span>
+               <span class="nav__logo-name">ZARK MERKERBERG</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+               <span class="nav__title">Menu</span>
+               <h3 class="nav__name">Rian</h3>
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link">Home</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link">About</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#memes" class="nav__link">Memes</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#buy" class="nav__link nav__link-button">BUY $ZARK</a>
+                  </li>
+               </ul>
+               <!--- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+            <div class="nav_buttons">
+               <!-- Toggle button -->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <h1 class="home__name">
+                  Zark Merkerberg
+               </h1>
+
+               <div class="home__perfil">
+                  <div class="home__image">
+                     
+                     <img src="assets/img/base-blue.png" alt="image" class="home__img">
+                     <div class="home__shadow"></div>
+                     <img src="assets/img/curved-arrow.svg" alt="" class="home__arrow">
+                  </div>
+
+                  <div class="home__social">
+                     <a href="https://temp.com" target="_blank" class="home__social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20" fill="currentColor">
+                           <path d="M12.001 20C16.4193 20 20.001 16.4183 20.001 12C20.001 7.58172 16.4193 4 12.001 4C7.5827 4 4.00098 7.58172 4.00098 12C4.00098 16.4183 7.5827 20 12.001 20ZM12.001 22C6.47813 22 2.00098 17.5228 2.00098 12C2.00098 6.47715 6.47813 2 12.001 2C17.5238 2 22.001 6.47715 22.001 12C22.001 17.5228 17.5238 22 12.001 22ZM8.89113 13.1708L6.39308 12.3911C5.85317 12.2255 5.84996 11.854 6.51397 11.5871L16.247 7.82754C16.8115 7.59644 17.1325 7.88842 16.9495 8.61641L15.2917 16.4377C15.1763 16.9941 14.8407 17.1266 14.3759 16.8698L11.825 14.9823L10.6361 16.1297C10.5139 16.2476 10.4145 16.3489 10.2273 16.3743C10.04 16.3996 9.88564 16.3442 9.77337 16.0337L8.90378 13.1628L8.89113 13.1708Z"></path>
+                        </svg>
+                     </a>
+
+                     <a href="https://temp.com" target="_blank" class="home__social-link-svg">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 2H1L9.26086 13.0145L1.44995 21.9999H4.09998L10.4883 14.651L16 22H23L14.3917 10.5223L21.8001 2H19.1501L13.1643 8.88578L8 2ZM17 20L5 4H7L19 20H17Z"></path>
+                            </svg>
+                        </i>
+                    </a>       
+
+                     <a href="https://temp.com" target="_blank" class="home__social-link-svg">
+                        <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="3 2 18 18" fill="currentColor">
+                           <path style=" fill:rgb(255, 255, 255);fill-opacity:1;" d="M 10.828125 2.507812 C 13.101562 2.261719 15.074219 2.902344 16.746094 4.425781 C 17.203125 4.285156 17.597656 4.039062 17.921875 3.679688 C 17.9375 3.714844 17.957031 3.75 17.972656 3.785156 C 17.113281 5.339844 15.941406 6.601562 14.453125 7.574219 C 13.992188 7.839844 13.527344 8.105469 13.066406 8.375 C 12.316406 7.816406 11.570312 7.816406 10.828125 8.375 C 8.738281 7.28125 7.105469 5.71875 5.921875 3.679688 C 5.9375 3.644531 5.957031 3.609375 5.972656 3.574219 C 6.3125 3.992188 6.742188 4.277344 7.253906 4.425781 C 8.296875 3.488281 9.488281 2.847656 10.828125 2.507812 Z M 10.828125 2.507812 "/>
+                           <path style=" fill:rgb(255, 255, 255);fill-opacity:1;" d="M 6.347656 6.027344 C 6.695312 6.414062 7.050781 6.804688 7.414062 7.199219 C 6.675781 8.695312 7.066406 9.777344 8.585938 10.453125 C 8.867188 10.507812 9.152344 10.523438 9.441406 10.507812 C 9.472656 10.835938 9.4375 11.15625 9.332031 11.464844 C 8.691406 11.859375 8.054688 12.25 7.414062 12.640625 C 7.976562 13.066406 8.582031 13.4375 9.226562 13.761719 C 9.917969 14.519531 10.433594 15.390625 10.773438 16.375 C 11.167969 17.628906 11.574219 18.875 12 20.105469 C 12.410156 18.832031 12.816406 17.550781 13.226562 16.265625 C 13.546875 15.308594 14.0625 14.472656 14.773438 13.761719 C 15.417969 13.4375 16.023438 13.066406 16.585938 12.640625 C 15.960938 12.246094 15.320312 11.875 14.667969 11.519531 C 14.566406 11.191406 14.496094 10.851562 14.453125 10.507812 C 16.570312 10.339844 17.28125 9.253906 16.585938 7.253906 C 16.890625 6.894531 17.175781 6.523438 17.441406 6.132812 C 17.511719 5.992188 17.582031 5.992188 17.652344 6.132812 C 17.957031 6.746094 18.1875 7.386719 18.347656 8.054688 C 18.347656 10.15625 18.453125 12.253906 18.667969 14.347656 C 18.902344 15.496094 19.273438 16.597656 19.785156 17.652344 C 19.75 17.6875 19.714844 17.722656 19.679688 17.761719 C 19.074219 17.242188 18.449219 16.746094 17.8125 16.265625 C 17.253906 17.066406 16.71875 17.882812 16.214844 18.71875 C 15.648438 18.261719 15.113281 17.761719 14.613281 17.226562 C 13.722656 18.613281 12.835938 20 11.945312 21.386719 C 11.109375 20.054688 10.277344 18.71875 9.441406 17.386719 C 9.332031 17.316406 9.226562 17.316406 9.121094 17.386719 C 8.675781 17.851562 8.210938 18.296875 7.734375 18.71875 C 7.226562 17.882812 6.691406 17.066406 6.132812 16.265625 C 5.445312 16.761719 4.789062 17.296875 4.160156 17.867188 C 4.5 17.003906 4.820312 16.113281 5.121094 15.199219 C 5.535156 12.800781 5.710938 10.382812 5.652344 7.945312 C 5.769531 7.257812 6 6.617188 6.347656 6.027344 Z M 6.347656 6.027344 "/>
+                           <path style=" fill:rgb(255, 255, 255);fill-opacity:1;" d="M 8.265625 7.945312 C 8.875 8.414062 9.515625 8.839844 10.1875 9.226562 C 9.609375 9.519531 9.042969 9.503906 8.480469 9.171875 C 8.15625 8.808594 8.085938 8.398438 8.265625 7.945312 Z M 8.265625 7.945312 "/>
+                           <path style=" fill:rgb(255, 255, 255);fill-opacity:1;" d="M 15.625 7.945312 C 15.972656 8.480469 15.867188 8.925781 15.308594 9.28125 C 14.789062 9.507812 14.292969 9.488281 13.8125 9.226562 C 14.480469 8.875 15.085938 8.449219 15.625 7.945312 Z M 15.625 7.945312 "/>
+                           <path style=" fill:rgb(255, 255, 255);fill-opacity:1;" d="M 11.574219 9.121094 C 12.660156 9.085938 13.28125 9.617188 13.441406 10.71875 C 13.476562 11.183594 13.511719 11.644531 13.546875 12.105469 C 13.804688 12.296875 14.070312 12.476562 14.347656 12.640625 C 13.085938 13.703125 12.285156 15.050781 11.945312 16.691406 C 11.671875 15.023438 10.871094 13.691406 9.546875 12.691406 C 9.859375 12.511719 10.160156 12.316406 10.453125 12.105469 C 10.449219 11.375 10.554688 10.664062 10.773438 9.972656 C 10.988281 9.632812 11.257812 9.347656 11.574219 9.121094 Z M 11.574219 9.121094 "/>
+                           </svg>
+                        </i>                    
+                     </a>
+                  </div>
+               </div>
+
+               <div class="home__info">
+                  <p class="home__description">
+                     <b>"Move fast and break memes."<b>
+                  </p>
+                  <a href="#about" class="home__scroll">
+                     <div class="home__scroll-box">
+                        <i class="ri-arrow-down-s-line"></i>
+                     </div>
+                     <span class="home__scroll-text">Scroll Down</span>
+                  </a>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <h2 class="section__title-1">
+                  About Me, me.
+               </h2>
+
+               <div class="about__perfil">
+                  <div class="about__image">
+                     <img src="assets/img/about-perfil.jpg" alt="image" class="about__img">
+                     <div class="about__shadow"></div>
+                     <div class="geometric-box"></div>
+                     <img src="assets/img/random-lines.svg" alt="" class="about__line">
+                     <div class="about__box"></div>
+                  </div>
+               </div>
+
+               <div class="about__info">
+                  <p class="about__description">
+                     I break stuff fast and call it innovation.
+                     <b>I don't read your chats.</b>
+                     <b>Your data is safe.</b>
+                  </p>
+
+                  <ul class="about__list">
+                     <li class="about__item">
+                        My Skills are: "Coding", as long as its someone elses' work.
+                     </li>
+                  </ul>
+
+                  <div class="about__buttons">
+                     <a href="#contact" class="button">
+                        <i class="ri-send-plane-line"></i> Contact Me
+                     </a>
+
+                     <a href="https://temp.com" target = "_blank" class="button__ghost">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+                  </div>
+               </div>
+
+
+            </div>
+         </section>
+
+         <!--==================== SERVICES ====================-->
+         <section class="services section">
+            <h2 class="section__title-2">
+               <span>Services.</span>
+            </h2>
+
+            <div class="services__container container grid">
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-layout-4-line"></i>
+                     </div>
+
+                     <h2 class="services__title">Web Design</h2>
+
+                     <p class="services__description">
+                        Beautiful and elegant designs with
+                        interfaces that are intuitive, efficient
+                        and pleasant to use for the user.
+                     </p>
+                  </div>
+               </article>
+
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-code-box-line"></i>
+                     </div>
+
+                     <h2 class="services__title">Development</h2>
+
+                     <p class="services__description">
+                        Custom web development tailored to your
+                        specifications, designed to provide a
+                        flawless user experience.
+                     </p>
+                  </div>
+               </article>
+               
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-smartphone-line"></i>
+                     </div>
+
+                     <h2 class="services__title">Mobile App</h2>
+
+                     <p class="services__description">
+                        Design and transform website projects
+                        into mobile apps to provide a seamless
+                        user experience.
+                     </p>
+                  </div>
+               </article>
+
+            </div>
+            
+         </section>
+
+         <!--==================== PROJECTS ====================-->
+         <section class="projects section" id="projects">
+            <h2 class="section__title-1">
+               <span>Projects.</span>
+            </h2>
+
+            <div class="projects__container container grid">
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-1.jpg" alt="image" class="projects__img">
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Website</h3>
+                     <h2 class="projects__title">Restaurant Website</h2>
+
+                     <p class="projects__description">
+                        Project that you carry out in the design
+                        and structure of the layout, showing the
+                        design at the client's request.
+                     </p>
+                  </div>
+                  <div class="projects__buttons">
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i>View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-2.jpg" alt="image" class="projects__img">
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">App</h3>
+                     <h2 class="projects__title">Yoga App</h2>
+
+                     <p class="projects__description">
+                        Project that you carry out in the design
+                        and structure of the layout, showing the
+                        design at the client's request.
+                     </p>
+                  </div>
+                  <div class="projects__buttons">
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i>View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-2.jpg" alt="image" class="projects__img">
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">App</h3>
+                     <h2 class="projects__title">Fast Food App</h2>
+
+                     <p class="projects__description">
+                        Project that you carry out in the design
+                        and structure of the layout, showing the
+                        design at the client's request.
+                     </p>
+                  </div>
+                  <div class="projects__buttons">
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i>View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-1.jpg" alt="image" class="projects__img">
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Website</h3>
+                     <h2 class="projects__title">Coffee Delivery Website</h2>
+
+                     <p class="projects__description">
+                        Project that you carry out in the design
+                        and structure of the layout, showing the
+                        design at the client's request.
+                     </p>
+                  </div>
+                  <div class="projects__buttons">
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i>View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-2.jpg" alt="image" class="projects__img">
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Website</h3>
+                     <h2 class="projects__title">Barbershop Website</h2>
+
+                     <p class="projects__description">
+                        Project that you carry out in the design
+                        and structure of the layout, showing the
+                        design at the client's request.
+                     </p>
+                  </div>
+                  <div class="projects__buttons">
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+                     <a href="https://temp.com/" target = "_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i>View
+                     </a>
+                  </div>
+               </article>
+            </div>
+         </section>
+
+         <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contact">
+            <div class="contact__container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span>Contact Me.</span>
+                  </h2>
+                  <p class="contact__description-1">
+                     I will read all emails. Send me any message
+                     you want and I'll get back to you.
+                  </p>
+
+                  <p class="contact__description-2">
+                     I need your <b>Name</b> and <b>Email Address</b>
+                     but you won't receive anything other than your reply.
+                  </p>
+
+                  <div class="geometric-box"></div>
+               </div>
+
+               <div class="contact__mail">
+                  <h2 class="contact__title">
+                     Send Me A Message.
+                  </h2>
+                  
+                  <form action="" class="contact__form" id="contact-form">
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="First Name">
+                           <label for="name" class="contact__label">First Name</label>
+                        </div>
+                        <div class="contact__box">
+                           <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
+                           <label for="email" class="contact__label">Email Address</label> 
+                        </div>
+                     </div>
+                     <div class="contact__box">
+                        <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject">
+                        <label for="subject" class="contact__label">Subject</label>
+                     </div>
+                     <div class="contact__box contact__area">
+                        <textarea name="user_message" id="message" class="contact__input" required placeholder="">Message</textarea>
+                        <label for="message" class="contact__label">Message</label>
+                     </div>
+                     <button type="submit" class="contact__button button">
+                        <i class="ri-send-plane-line"></i> Send Message
+                     </button>
+                  </form>
+               </div>
+
+               <div class="contact__social">
+                  <img src="assets/img/curved-arrow.svg" alt="" class="contact__social-arrow">
+                  <div class="contact__social-data">
+                     <div>
+                        <p class="contact__social-description-1">
+                           Does not send emails.
+                        </p>
+                        <p class="contact__social-description-1">
+                           Write me on my social networks.
+                        </p>
+                     </div>
+                     <div class="contact__social-links">
+                        <a href="https://temp.com" target="_blank" class="contact__social-link">
+                           <i class="ri-facebook-circle-line"></i>
+                        </a>
+                        <a href="https://temp.com" target="_blank" class="contact__social-link">
+                           <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://temp.com" target="_blank" class="contact__social-link">
+                           <i class="ri-linkedin-box-line"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <ul class="footer__links">
+               <li>
+                  <a href="#about" class="footer__link">About</a>
+               </li>
+               <li>
+                  <a href="#services" class="footer__link">Services</a>
+               </li>
+               <li>
+                  <a href="#projects" class="footer__link">Projects</a>
+               </li>
+            </ul>
+            <span class="footer__copy">
+               &#169; All Rights Reserved By
+               <a href="">Bedimcode</a>
+            </span>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src=""></script>
+      
+      <!--=============== EMAIL JS ===============-->
+      
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
