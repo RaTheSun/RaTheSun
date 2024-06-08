@@ -38,16 +38,55 @@ const shadowHeader = () =>{
 window.addEventListener('scroll', shadowHeader)
 
 
-/*=============== EMAIL JS ===============*/
+/*=============== Copy Icon ===============*/
+function copyToClipboard(text, element) {
+    navigator.clipboard.writeText(text).then(() => {
+        const copiedIcon = document.getElementById('copied-icon');
+        copiedIcon.classList.add('show');
+
+        setTimeout(() => {
+            copiedIcon.classList.remove('show');
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+
+/*=============== Data Counter ===============*/
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('[data-target]');
+    counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText.replace(/,/g, '').replace(/[^0-9]/g, '');
+
+            const increment = target / 200; // Adjust this for speed
+
+            if (count < target) {
+                const newCount = Math.ceil(count + increment);
+                if (counter.classList.contains('tokenomics__percentage')) {
+                    counter.innerText = newCount.toLocaleString() + '%';
+                } else if (counter.classList.contains('tokenomics__subheader-currency')) {
+                    counter.innerText = newCount.toLocaleString() + ' tokens';
+                } else {
+                    counter.innerText = newCount.toLocaleString();
+                }
+                setTimeout(updateCounter, 10); // Adjust this for speed
+            } else {
+                if (counter.classList.contains('tokenomics__percentage')) {
+                    counter.innerText = target.toLocaleString() + '%';
+                } else if (counter.classList.contains('tokenomics__subheader-currency')) {
+                    counter.innerText = target.toLocaleString() + ' tokens';
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            }
+        };
+        updateCounter();
+    });
+});
 
 
-/*=============== SHOW SCROLL UP ===============*/ 
 
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
-
-/*=============== DARK LIGHT THEME ===============*/ 
-
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/
